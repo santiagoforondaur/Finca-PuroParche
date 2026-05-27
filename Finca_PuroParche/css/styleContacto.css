@@ -1,0 +1,43 @@
+        /* Pequeños ajustes específicos para el formulario usando tu misma línea de diseño */
+        .seccion-formulario {
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        .grupo-campo {
+            margin-bottom: 20px;
+        }
+        .grupo-campo label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: #333;
+        }
+        .grupo-campo input, .grupo-campo select, .grupo-campo textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 14px;
+            font-family: inherit;
+            box-sizing: border-box;
+        }
+        .grupo-campo textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+        .btn-enviar-form {
+            background-color: #83cd29; /* El color verde de tus botones principales */
+            color: white;
+            border: none;
+            padding: 14px 28px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 50px;
+            cursor: pointer;
+            width: 100%;
+            transition: background 0.3s ease;
+        }
+        .btn-enviar-form:hover {
+            background-color: #6eb320;
+        }

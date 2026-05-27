@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destinos — Agencia de Viajes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="stylesheet" href="../css/styledestino.css">
+</head>
+<body>
+
+<header>
+    <div class="contenedor-navegacion">
+        <span class="logo-texto"> Finca PuroParche</span>
+        <nav class="menu">
+            <a href="../Index.html" >Inicio</a>
+            <a href="Todo.html">Todo</a>
+            <a href="Fincas.html">Fincas</a>
+            <a href="Glampings.html">Glampings</a>
+            <a href="Contactanos.html" >Publicar</a>
+        </nav>
+    </div>
+</header>
+
+<section class="hero-destinos">
+    <span class="etiqueta"> Explora el mundo</span>
+    <h1>Destinos que <em>inspiran</em><br>el alma viajera</h1>
+    <p>Descubre lugares únicos, culturas vibrantes y experiencias que recordarás toda la vida.</p>
+</section>
+
+<div class="filtros">
+    <button class="filtro-btn activo" onclick="filtrar(this,'todos')">Todos</button>
+    <button class="filtro-btn" onclick="filtrar(this,'Copacabana')"> Copacabana</button>
+    <button class="filtro-btn" onclick="filtrar(this,'Girardota')"> Girardota</button>
+    <button class="filtro-btn" onclick="filtrar(this,'Barbosa')"> Barbosa</button>
+    <button class="filtro-btn" onclick="filtrar(this,'San Jeronimo')"> San Jeronimo</button>
+    <button class="filtro-btn" onclick="filtrar(this,'Santa Fe')"> Santa Fe</button>
+    <button class="filtro-btn" onclick="filtrar(this,'Sopetran')"> Sopetran</button>
+</div>
+
+<section class="seccion-destinos">
+    <div class="grid-destinos" id="grid">
+
+        <div class="tarjeta-destino" data-region="Copacabana">
+            <img class="tarjeta-img" src="../img/FincaLaManuela.webp" alt="Copacabana">
+            <div class="tarjeta-info">
+                <p class="tarjeta-continente">Copacabana</p>
+                <div class="estrellas">★★★★★</div>
+                <h2 class="tarjeta-nombre">Finca La Manuela</h2>
+                <p class="tarjeta-descripcion">Disfruta de la naturaleza y la tranquilidad en medio de los bosques y ríos de Copacabana.</p>
+                <div class="tarjeta-footer">
+                    <div class="tarjeta-precio"><span class="precio-desde">desde</span><span class="precio-valor">$1.890 COP</span></div>
+                    <span class="tarjeta-duracion"> 2 días</span>
+                    <a href="../html/fincas/FincaLaManuela/StandBY.html" class="btn-ver">Ver paquete →</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="tarjeta-destino" data-region="Copacabana">
+            <img class="tarjeta-img" src="../img/FincaCristal.jpg" alt="Copacabana">
+            <div class="tarjeta-info">
+                <p class="tarjeta-continente">Copacabana</p>
+                <div class="estrellas">★★★★☆</div>
+                <h2 class="tarjeta-nombre">Finca Cristal</h2>
+                <p class="tarjeta-descripcion">Experimenta la belleza natural y la comodidad en medio de los bosques y ríos de Copacabana.</p>
+                <div class="tarjeta-footer">
+                    <div class="tarjeta-precio"><span class="precio-desde">desde</span><span class="precio-valor">$1.500 COP</span></div>
+                    <span class="tarjeta-duracion"> 2 días</span>
+                    <a href="../html/fincas/FincaLaManuela/StandBY.html" class="btn-ver">Ver paquete →</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="tarjeta-destino" data-region="Girardota">
+            <img class="tarjeta-img" src="../img/FincaPedregal.webp" alt="Girardota">
+            <div class="tarjeta-info">
+                <p class="tarjeta-continente">Girardota</p>
+                <div class="estrellas">★★★★★</div>
+                <h2 class="tarjeta-nombre">Finca Pedregal</h2>
+                <p class="tarjeta-descripcion">Disfruta de la naturaleza y la tranquilidad en medio de los bosques y ríos de Girardota.</p>
+                <div class="tarjeta-footer">
+                    <div class="tarjeta-precio"><span class="precio-desde">desde</span><span class="precio-valor">$2.450 COP</span></div>
+                    <span class="tarjeta-duracion">2 días</span>
+                    <a href="../html/fincas/FincaLaManuela/StandBY.html" class="btn-ver">Ver paquete →</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="tarjeta-destino" data-region="Barbosa">
+            <img class="tarjeta-img" src="../img/FincaRancho.jpg" alt="Barbosa">
+            <div class="tarjeta-info">
+                <p class="tarjeta-continente">Barbosa</p>
+                <div class="estrellas">★★★★★</div>
+                <h2 class="tarjeta-nombre">Finca El Rancho</h2>
+                <p class="tarjeta-descripcion">Disfruta de la naturaleza y la tranquilidad en medio de los bosques y ríos de Barbosa.</p>
+                <div class="tarjeta-footer">
+                    <div class="tarjeta-precio"><span class="precio-desde">desde</span><span class="precio-valor">$1.750 COP</span></div>
+                    <span class="tarjeta-duracion"> 3 días</span>
+                    <a href="../html/fincas/FincaLaManuela/StandBY.html" class="btn-ver">Ver paquete →</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="tarjeta-destino" data-region="San Jeronimo">
+            <img class="tarjeta-img" src="../img/Finca El Paraiso.webp" alt="San Jerónimo">
+            <div class="tarjeta-info">
+                <p class="tarjeta-continente">San Jerónimo</p>
+                <div class="estrellas">★★★★☆</div>
+                <h2 class="tarjeta-nombre">Finca El Paraiso</h2>
+                <p class="tarjeta-descripcion">Disfruta de la naturaleza y la tranquilidad en medio de los bosques y ríos de San Jerónimo.</p>
+                <div class="tarjeta-footer">
+                    <div class="tarjeta-precio"><span class="precio-desde">desde</span><span class="precio-valor">$2.100 COP</span></div>
+                    <span class="tarjeta-duracion"> 2 días</span>
+                    <a href="../html/fincas/FincaLaManuela/StandBY.html" class="btn-ver">Ver paquete →</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="tarjeta-destino" data-region="Santa Fe">
+            <img class="tarjeta-img" src="../img/FincaReposo.webp" alt="Santa Fe">
+            <div class="tarjeta-info">
+                <p class="tarjeta-continente">Santa Fe de Antioquia</p>
+                <div class="estrellas">★★★★☆</div>
+                <h2 class="tarjeta-nombre">Finca El Reposo</h2>
+                <p class="tarjeta-descripcion">Disfruta de la naturaleza y la tranquilidad en medio de los bosques y ríos de Santa Fe de Antioquia.</p>
+                <div class="tarjeta-footer">
+                    <div class="tarjeta-precio"><span class="precio-desde">desde</span><span class="precio-valor">$2.200 COP</span></div>
+                    <span class="tarjeta-duracion"> 2 días</span>
+                    <a href="../html/fincas/FincaLaManuela/StandBY.html" class="btn-ver">Ver paquete →</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="tarjeta-destino" data-region="Santa Fe">
+            <img class="tarjeta-img" src="../img/FincaLaHermosa.jpg" alt="Santa Fe">
+            <div class="tarjeta-info">
+                <p class="tarjeta-continente">Santa Fe de Antioquia</p>
+                <div class="estrellas">★★★★☆</div>
+                <h2 class="tarjeta-nombre">Finca La Hermosa</h2>
+                <p class="tarjeta-descripcion">Disfruta de la naturaleza y la tranquilidad en medio de los bosques y ríos de Santa Fe de Antioquia.</p>
+                <div class="tarjeta-footer">
+                    <div class="tarjeta-precio"><span class="precio-desde">desde</span><span class="precio-valor">$2.600 COP</span></div>
+                    <span class="tarjeta-duracion"> 2 días</span>
+                    <a href="../html/fincas/FincaLaManuela/StandBY.html" class="btn-ver">Ver paquete →</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="tarjeta-destino" data-region="Sopetran">
+            <img class="tarjeta-img" src="../img/FincaLaGloria.jpg" alt="Sopetrán">
+            <div class="tarjeta-info">
+                <p class="tarjeta-continente">Sopetrán</p>
+                <div class="estrellas">★★★★★</div>
+                <h2 class="tarjeta-nombre">Finca La Gloria</h2>
+                <p class="tarjeta-descripcion">Aurora boreal, géiseres, volcanes y fiordos. Islandia es el destino más épico de la tierra.</p>
+                <div class="tarjeta-footer">
+                    <div class="tarjeta-precio"><span class="precio-desde">desde</span><span class="precio-valor">$2.950 COP</span></div>
+                    <span class="tarjeta-duracion"> 3 días</span>
+                    <a href="../html/fincas/FincaLaManuela/StandBY.html" class="btn-ver">Ver paquete →</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<div class="banner-cta">
+    <div>
+        <h2>¿No encuentras tu destino ideal?</h2>
+        <p>Cuéntanos tus sueños y diseñamos el viaje perfecto para ti. Atención personalizada, sin costo extra.</p>
+    </div>
+    <a href="https://wa.me/573137295214?text=¡Hola!%20No%20encontré%20mi%20destino%20ideal%20en%20la%20web%20y%20quiero%20asesoría." target="_blank" class="btn-cta" style="text-decoration: none; display: inline-block; text-align: center;">Hablar con un asesor</a>
+</div>
+
+<footer>
+    <p>© 2025 FincaPuroParche · Todos los derechos reservados</p>
+</footer>
+
+<script>
+    function filtrar(btn, region) {
+        document.querySelectorAll('.filtro-btn').forEach(b => b.classList.remove('activo'));
+        btn.classList.add('activo');
+        const tarjetas = document.querySelectorAll('.tarjeta-destino');
+        tarjetas.forEach((t, i) => {
+            const match = region === 'todos' || t.dataset.region === region;
+            t.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+            if (match) {
+                t.style.display = '';
+                setTimeout(() => { t.style.opacity = '1'; t.style.transform = ''; }, i * 40);
+            } else {
+                t.style.opacity = '0'; t.style.transform = 'scale(0.95)';
+                setTimeout(() => t.style.display = 'none', 300);
+            }
+        });
+        const primera = document.querySelector('#grid .tarjeta-destino');
+        if (primera) primera.style.gridColumn = region === 'todos' ? 'span 2' : 'span 1';
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle del Destino — Finca PuroParche</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="stylesheet" href="../../../css/styleindex.css">
+    <link rel="stylesheet" href="../../../css/styledestino.css">
+    <link rel="stylesheet" href="../../../css/stylePlantilla.css">
+</head>
+<body>
+
+<header id="navbar">
+    <div class="contenedor-navegacion">
+        <span class="logo-texto"> Finca PuroParche</span>
+        <nav class="menu">
+            <a href="../../../Index.html">Inicio</a>
+            <a href="../../Todo.html">Todo</a>
+            <a href="../../Fincas.html">Fincas</a>
+            <a href="../../Glampings.html">Glampings</a>
+            <a href="../../contactanos.html">Publicar</a>
+        </nav>
+    </div>
+</header>
+
+<main class="seccion-detalle">
+
+    <div class="encabezado-destino">
+        <span class="etiqueta" id="dyn-tag-categoria">Categoría</span>
+        <h1 id="dyn-titulo">Cargando Parche...</h1>
+        <div style="color: rgba(255,255,255,0.4); font-size: 14px;">
+            Ubicación: <strong id="dyn-ubicacion" style="color: white; font-weight: 500;">...</strong>
+        </div>
+    </div>
+
+<div class="galeria-premium">
+        <div class="foto-principal-wrap">
+            <img src="../../../img/FincaLaManuela.webp" alt="Vista Principal">
+        </div>
+        
+        <div class="fotos-secundarias-grid">
+            <div class="foto-secundaria"><img src="../../../img/FincaCristal.jpg" alt="Instalaciones"></div>
+            <div class="foto-secundaria"><img src="../../../img/FincaPedregal.webp" alt="Interiores"></div>
+            <div class="foto-secundaria"><img src="../../../img/FincaLaGloria.jpg" alt="Zonas Húmedas"></div>
+            <div class="foto-secundaria"><img src="../../../img/FincaRancho.jpg" alt="Panorámica"></div>
+            
+    <a href="galeria.html" class="btn-mostrar-fotos">
+            <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="display: inline-block; height: 14px; width: 14px; fill: currentcolor; margin-right: 8px;"><path d="M2.5 11.5a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3zm5.5 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3zm5.5 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3zm-11-5a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3zm5.5 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3zm5.5 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3zm-11-5a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3zm5.5 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3zm5.5 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3z"></path></svg>
+            Mostrar todas las fotos (21)
+        </a>
+        </div>
+    </div>
+
+    <div id="modalGaleria" class="modal-galeria">
+    <div class="modal-contenido">
+        <div class="modal-header">
+            <h3>Todas las fotos de la propiedad</h3>
+            <button class="btn-cerrar-modal" onclick="cerrarGaleria()">&times; Cerrar</button>
+        </div>
+        <div class="modal-lista-fotos">
+            <img src="../../img/FincaCristal.jpg" alt="Foto 1">
+            <img src="../../img/GlampingElTiempo.jpeg" alt="Foto 2">
+            <img src="../../img/FincaPedregal.webp" alt="Foto 3">
+            <img src="../../img/FincaLaGloria.jpg" alt="Foto 4">
+            <img src="../../img/FincaPrado.jpg" alt="Foto 5">
+            <img src="../../img/FincaRancho.jpg" alt="Foto 6">
+        </div>
+    </div>
+</div>
+
+    <div class="cuerpo-layout">
+        
+        <div class="columna-contenido">
+            
+            <div class="bloque-cristal">
+                <h2><span></span> Sobre esta experiencia</h2>
+                <p id="dyn-descripcion">...</p>
+            </div>
+
+            <div class="bloque-cristal">
+                <h2><span></span> Ficha de acomodación</h2>
+                <div class="ficha-tecnica" id="dyn-ficha"></div>
+            </div>
+
+            <div class="bloque-cristal">
+                <h2><span></span> Comodidades incluidas</h2>
+                <div class="comodidades-grid" id="dyn-comodidades"></div>
+            </div>
+
+        </div>
+
+        <div class="columna-sidebar">
+            <div class="bloque-cristal tarjeta-reserva-fija">
+                <div class="precio-reserva-wrap">
+                    <div class="label-precio">Precio desde por fin de semana</div>
+                    <div class="monto" id="dyn-precio">$0 COP</div>
+                </div>
+
+                <div class="condiciones-texto" id="dyn-condiciones"></div>
+
+                <div style="font-size: 14px; font-weight: 700; margin-bottom: 16px; color: white;">
+                    ¿Quieres reservar o consultar fechas?
+                </div>
+                
+                <a href="#" id="wa-asesor-1" target="_blank" class="btn-reserva-wa primario">Chatear con Asesor principal</a>
+                <a href="#" id="wa-asesor-2" target="_blank" class="btn-reserva-wa secundario">Hablar con Canal de respaldo</a>
+            </div>
+        </div>
+
+    </div>
+</main>
+
+<footer>
+    <p>© 2025 FincaPuroParche · Todos los derechos reservados</p>
+</footer>
+
+
+<script>
+    // 🛠️ CONFIGURA LOS DATOS DE CADA PROPIEDAD AQUÍ
+    const CONFIG_PROPIEDAD = {
+        titulo: "Finca La Manuela",
+        municipio: "Copacabana, Antioquia",
+        categoria: "Finca Premium", 
+        precio: "$1.890.000",
+        condiciones: "Sujeto a disponibilidad. Tarifa estándar para fines de semana ordinarios (Sáb-Dom). No incluye cobro de aseo final ($60.000) ni depósito de seguridad reembolsable.",
+        descripcion: "Disfruta de la naturaleza y el descanso definitivo en una propiedad campestre de primer nivel en Copacabana. Cuenta con piscina privada de borde infinito, kiosco de parrandas totalmente dotado, amplias habitaciones con aire acondicionado y una vista inigualable hacia el valle.",
+        
+        // CORREGIDO: Homologado el nombre de la propiedad a 'capacidadMax' para que coincida con la lógica de abajo
+        capacidadMax: "18 Huéspedes",
+        habitaciones: "5 Cuartos con baño",
+        camasTotales: "12 Camas disponibles",
+        banos: "6 Baños sociales",
+
+        // Checklist de comodidades
+        comodidades: [
+            "Piscina Privada",
+            "Jacuzzi Climatizado",
+            "Zona de Asados / BBQ",
+            "Sonido Profesional Integrado",
+            "Billar y Mesa de Ping Pong",
+            "Parqueadero para 8 Vehículos",
+            "Cocina tipo Isla dotada",
+            "Pet Friendly (Mascotas permitidas)",
+            "Conexión Wi-Fi de alta velocidad"
+        ],
+
+        // Rutas y extensiones reales mapeadas desde tu carpeta /IMG/
+        imagenes: [
+            "../../IMG/FincaLaManuela.webp.JPEG",     // Primera imagen (Finca)
+            "../../IMG/FincaCristal.png.PNG",         // Segunda imagen (Finca)
+            "../../IMG/GlampingLaEstrella.png.PNG",   // Tercera imagen (Glamping)
+            "../../IMG/GlampingNido.png.PNG",         // Cuarta imagen (Glamping)
+            "../../IMG/FincaLaManuela.webp.JPEG"      // Quinta imagen (Repetida temporal)
+        ],
+
+        // Teléfonos de tus asesores de WhatsApp
+        whatsappAsesor1: "573105608134",
+        whatsappAsesor2: "573137295214"
+    };
+
+    // ==========================================
+    // LOGICA DE IMPRESIÓN (AUTOMÁTICA)
+    // ==========================================
+    document.addEventListener("DOMContentLoaded", () => {
+        const c = CONFIG_PROPIEDAD;
+        
+        // Mapeo de Textos
+        document.getElementById("dyn-titulo").innerHTML = `${c.titulo} — <em>${c.municipio.split(',')[0]}</em>`;
+        document.getElementById("dyn-tag-categoria").innerText = c.categoria;
+        document.getElementById("dyn-ubicacion").innerText = c.municipio;
+        document.getElementById("dyn-descripcion").innerText = c.descripcion;
+        document.getElementById("dyn-precio").innerText = c.precio;
+        document.getElementById("dyn-condiciones").innerText = c.condiciones;
+
+        // Construcción de Ficha Técnica
+        const fichaContainer = document.getElementById("dyn-ficha");
+        const itemsFicha = [
+            `👥 Capacidad: <strong>${c.capacidadMax}</strong>`,
+            `🚪 Cuartos: <strong>${c.habitaciones}</strong>`,
+            `🛏️ Camas: <strong>${c.camasTotales}</strong>`,
+            `🚿 Baños: <strong>${c.banos}</strong>`
+        ];
+        itemsFicha.forEach(item => {
+            const div = document.createElement("div");
+            div.className = "ficha-item";
+            div.innerHTML = item;
+            fichaContainer.appendChild(div);
+        });
+
+        // Construcción de Comodidades
+        const comodidadesContainer = document.getElementById("dyn-comodidades");
+        c.comodidades.forEach(com => {
+            const div = document.createElement("div");
+            div.className = "comodidad-item";
+            div.innerHTML = `<span class="icono-check">✓</span> ${com}`;
+            comodidadesContainer.appendChild(div);
+        });
+
+        // Configuración Automatizada de enlaces de WhatsApp
+        const textoWA = encodeURIComponent(`¡Hola PuroParche! Vengo de ver "${c.titulo}" en la web y me gustaría validar disponibilidad y detalles para reservar.`);
+        document.getElementById("wa-asesor-1").href = `https://wa.me/${c.whatsappAsesor1}?text=${textoWA}`;
+        document.getElementById("wa-asesor-2").href = `https://wa.me/${c.whatsappAsesor2}?text=${textoWA}`;
+    });
+
+</script>
+
+</body>
+</html>

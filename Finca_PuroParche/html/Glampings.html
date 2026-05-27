@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destinos — Agencia de Viajes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="stylesheet" href="../css/styledestino.css">
+</head>
+<body>
+
+<header>
+    <div class="contenedor-navegacion">
+        <span class="logo-texto"> Agencia de Viajes</span>
+        <nav class="menu">
+            <a href="../Index.html" >Inicio</a>
+            <a href="Todo.html">Todo</a>
+            <a href="Fincas.html">Fincas</a>
+            <a href="Glampings.html">Glampings</a>
+            <a href="Contactanos.html" >Publicar</a>
+        </nav>
+    </div>
+</header>
+
+<section class="hero-destinos">
+    <span class="etiqueta"> Explora el mundo</span>
+    <h1>Destinos que <em>inspiran</em><br>el alma viajera</h1>
+    <p>Descubre lugares únicos, culturas vibrantes y experiencias que recordarás toda la vida.</p>
+</section>
+
+<div class="filtros">
+    <button class="filtro-btn activo" onclick="filtrar(this,'todos')">Todos</button>
+    <button class="filtro-btn" onclick="filtrar(this,'Copacabana')"> Copacabana</button>
+    <button class="filtro-btn" onclick="filtrar(this,'Girardota')"> Girardota</button>
+    <button class="filtro-btn" onclick="filtrar(this,'Barbosa')"> Barbosa</button>
+    <button class="filtro-btn" onclick="filtrar(this,'San Pedro')"> San Pedro</button>
+    <button class="filtro-btn" onclick="filtrar(this,'San Vicente')"> San Vicente</button>
+    <button class="filtro-btn" onclick="filtrar(this,'Santa Elena')"> Santa Elena</button>
+</div>
+
+<section class="seccion-destinos">
+    <div class="grid-destinos" id="grid">
+
+        <div class="tarjeta-destino" data-region="Copacabana">
+            <img class="tarjeta-img" src="../img/GlampingSouth.webp" alt="Copacabana">
+            <div class="tarjeta-info">
+                <p class="tarjeta-continente">Copacabana</p>
+                <div class="estrellas">★★★★★</div>
+                <h2 class="tarjeta-nombre">Glamping South</h2>
+                <p class="tarjeta-descripcion">Disfruta de la naturaleza y la tranquilidad en medio de los bosques y ríos de Copacabana.</p>
+                <div class="tarjeta-footer">
+                    <div class="tarjeta-precio"><span class="precio-desde">desde</span><span class="precio-valor">$1.890 COP</span></div>
+                    <span class="tarjeta-duracion"> 3 días</span>
+                    <a href="../html/fincas/FincaLaManuela/StandBY.html" class="btn-ver">Ver paquete →</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="tarjeta-destino" data-region="Girardota">
+            <img class="tarjeta-img" src="../img/GlampingOdisea.jpg" alt="Girardota">
+            <div class="tarjeta-info">
+                <p class="tarjeta-continente">Girardota</p>
+                <div class="estrellas">★★★★☆</div>
+                <h2 class="tarjeta-nombre">Glamping Odisea</h2>
+                <p class="tarjeta-descripcion">Disfruta de la naturaleza y la tranquilidad en medio de los bosques y ríos de Girardota.</p>
+                <div class="tarjeta-footer">
+                    <div class="tarjeta-precio"><span class="precio-desde">desde</span><span class="precio-valor">$1.200 COP</span></div>
+                    <span class="tarjeta-duracion"> 7 días</span>
+                    <a href="../html/fincas/FincaLaManuela/StandBY.html" class="btn-ver">Ver paquete →</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="tarjeta-destino" data-region="Barbosa">
+            <img class="tarjeta-img" src="../img/GlampingBotanico.jpg" alt="Glamping Botanico">
+            <div class="tarjeta-info">
+                <p class="tarjeta-continente">Barbosa</p>
+                <div class="estrellas">★★★★★</div>
+                <h2 class="tarjeta-nombre">Glamping Botanico</h2>
+                <p class="tarjeta-descripcion">Disfruta de la naturaleza y la tranquilidad en medio de los bosques y ríos de Barbosa.</p>
+                <div class="tarjeta-footer">
+                    <div class="tarjeta-precio"><span class="precio-desde">desde</span><span class="precio-valor">$2.450 COP</span></div>
+                    <span class="tarjeta-duracion"> 2 días</span>
+                    <a href="../html/fincas/FincaLaManuela/StandBY.html" class="btn-ver">Ver paquete →</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="tarjeta-destino" data-region="San Pedro">
+            <img class="tarjeta-img" src="../img/GlampingElTiempo.jpeg" alt="Glamping el Tiempo">
+            <div class="tarjeta-info">
+                <p class="tarjeta-continente">San Pedro</p>
+                <div class="estrellas">★★★★★</div>
+                <h2 class="tarjeta-nombre">Glamping el Tiempo</h2>
+                <p class="tarjeta-descripcion">Disfruta de la naturaleza y la tranquilidad en medio de los bosques y ríos de San Pedro.</p>
+                <div class="tarjeta-footer">
+                    <div class="tarjeta-precio"><span class="precio-desde">desde</span><span class="precio-valor">$1.750 COP</span></div>
+                    <span class="tarjeta-duracion"> 3 días</span>
+                    <a href="../html/fincas/FincaLaManuela/StandBY.html" class="btn-ver">Ver paquete →</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="tarjeta-destino" data-region="San Pedro">
+            <img class="tarjeta-img" src="../img/GlampingEspaña.jpg" alt="Glamping España">
+            <div class="tarjeta-info">
+                <p class="tarjeta-continente">San Pedro</p>
+                <div class="estrellas">★★★★☆</div>
+                <h2 class="tarjeta-nombre">Glamping España</h2>
+                <p class="tarjeta-descripcion">Disfruta de la naturaleza y la tranquilidad en medio de los bosques y ríos de San Pedro.</p>
+                <div class="tarjeta-footer">
+                    <div class="tarjeta-precio"><span class="precio-desde">desde</span><span class="precio-valor">$2.100 COP</span></div>
+                    <span class="tarjeta-duracion"> 2 días</span>
+                    <a href="../html/fincas/FincaLaManuela/StandBY.html" class="btn-ver">Ver paquete →</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="tarjeta-destino" data-region="San Vicente">
+            <img class="tarjeta-img" src="../img/GlampingEstadia.jpg" alt="Glamping Estadia">
+            <div class="tarjeta-info">
+                <p class="tarjeta-continente">San Vicente</p>
+                <div class="estrellas">★★★★☆</div>
+                <h2 class="tarjeta-nombre">Glamping Estadia</h2>
+                <p class="tarjeta-descripcion">Disfruta de la naturaleza y la tranquilidad en medio de los bosques y ríos de San Vicente.</p>
+                <div class="tarjeta-footer">
+                    <div class="tarjeta-precio"><span class="precio-desde">desde</span><span class="precio-valor">$2.200 COP</span></div>
+                    <span class="tarjeta-duracion"> 2 días</span>
+                    <a href="../html/fincas/FincaLaManuela/StandBY.html" class="btn-ver">Ver paquete →</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="tarjeta-destino" data-region="San Vicente">
+            <img class="tarjeta-img" src="../img/GlampingTerranova.jpg" alt="Glamping Terranova">
+            <div class="tarjeta-info">
+                <p class="tarjeta-continente">San Vicente</p>
+                <div class="estrellas">★★★★☆</div>
+                <h2 class="tarjeta-nombre">Glamping Terranova</h2>
+                <p class="tarjeta-descripcion">Disfruta de la naturaleza y la tranquilidad en medio de los bosques y ríos de San Vicente.</p>
+                <div class="tarjeta-footer">
+                    <div class="tarjeta-precio"><span class="precio-desde">desde</span><span class="precio-valor">$2.600 COP</span></div>
+                    <span class="tarjeta-duracion"> 2 días</span>
+                    <a href="../html/fincas/FincaLaManuela/StandBY.html" class="btn-ver">Ver paquete →</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="tarjeta-destino" data-region="Santa Elena">
+            <img class="tarjeta-img" src="../img/GlampingBosko.jpg" alt="Glamping Bosko">
+            <div class="tarjeta-info">
+                <p class="tarjeta-continente">Santa Elena</p>
+                <div class="estrellas">★★★★★</div>
+                <h2 class="tarjeta-nombre">Glamping Bosko</h2>
+                <p class="tarjeta-descripcion">Disfruta de la naturaleza y la tranquilidad en medio de los bosques y ríos de Santa Elena.</p>
+                <div class="tarjeta-footer">
+                    <div class="tarjeta-precio"><span class="precio-desde">desde</span><span class="precio-valor">$2.950 COP</span></div>
+                    <span class="tarjeta-duracion"> 3 días</span>
+                    <a href="../html/fincas/FincaLaManuela/StandBY.html" class="btn-ver">Ver paquete →</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<div class="banner-cta">
+    <div>
+        <h2>¿No encuentras tu destino ideal?</h2>
+        <p>Cuéntanos tus sueños y diseñamos el viaje perfecto para ti. Atención personalizada, sin costo extra.</p>
+    </div>
+    <a href="https://wa.me/573137295214?text=¡Hola!%20No%20encontré%20mi%20destino%20ideal%20en%20la%20web%20y%20quiero%20asesoría." target="_blank" class="btn-cta" style="text-decoration: none; display: inline-block; text-align: center;">Hablar con un asesor</a>
+</div>
+
+<footer>
+    <p>© 2025 FincaPuroParche · Todos los derechos reservados</p>
+</footer>
+
+<script>
+    function filtrar(btn, region) {
+        document.querySelectorAll('.filtro-btn').forEach(b => b.classList.remove('activo'));
+        btn.classList.add('activo');
+        const tarjetas = document.querySelectorAll('.tarjeta-destino');
+        tarjetas.forEach((t, i) => {
+            const match = region === 'todos' || t.dataset.region === region;
+            t.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+            if (match) {
+                t.style.display = '';
+                setTimeout(() => { t.style.opacity = '1'; t.style.transform = ''; }, i * 40);
+            } else {
+                t.style.opacity = '0'; t.style.transform = 'scale(0.95)';
+                setTimeout(() => t.style.display = 'none', 300);
+            }
+        });
+        const primera = document.querySelector('#grid .tarjeta-destino');
+        if (primera) primera.style.gridColumn = region === 'todos' ? 'span 2' : 'span 1';
+    }
+</script>
+
+</body>
+</html>
