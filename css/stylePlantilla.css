@@ -1,0 +1,485 @@
+/* ==========================================================================
+        MAQUETACIÓN MODO OSCURO PREMIUM (Finca PuroParche)
+           ========================================================================== */
+        .seccion-detalle {
+            position: relative;
+            z-index: 1;
+            max-width: 1200px;
+            margin: 140px auto 60px; /* Margen superior para respetar el header fixed */
+            padding: 0 24px;
+        }
+
+        /* Cabecera de la propiedad */
+        .encabezado-destino {
+            margin-bottom: 32px;
+        }
+        .encabezado-destino h1 {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 38px;
+            font-weight: 700;
+            color: white;
+            margin-top: 8px;
+            margin-bottom: 12px;
+        }
+        .encabezado-destino h1 em {
+            font-style: normal;
+            color: var(--verde);
+        }
+
+        /* Galería de Fotos - Cuadrícula de alto impacto */
+        .galeria-premium {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 16px;
+            margin-bottom: 48px;
+        }
+        .foto-principal-wrap img {
+            width: 100%;
+            height: 480px;
+            object-fit: cover;
+            border-radius: 16px;
+            border: 1px solid var(--glass-border);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+        .fotos-secundarias-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 16px;
+        }
+        .foto-secundaria img {
+            width: 100%;
+            height: 232px;
+            object-fit: cover;
+            border-radius: 12px;
+            border: 1px solid var(--glass-border);
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+        .foto-secundaria img:hover {
+            transform: scale(1.02);
+            border-color: var(--verde);
+        }
+
+    /* Contenedor general estilo Airbnb */
+    .galeria-premium {
+        display: grid;
+        grid-template-columns: 2fr 1fr; /* Izquierda más grande que la derecha */
+        gap: 8px;
+        max-width: 1200px;
+        margin: 20px auto;
+        border-radius: 16px;
+        overflow: hidden; /* Corta las esquinas en curvas perfectas */
+        position: relative;
+    }
+
+    .galeria-premium img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Evita que las imágenes se estiren o distorsionen */
+        display: block;
+        transition: filter 0.3s ease;
+    }
+
+    .galeria-premium img:hover {
+        filter: brightness(0.9); /* Oscurece sutilmente al pasar el mouse */
+    }
+
+    /* Caja de la izquierda (Foto principal) */
+    .foto-principal-wrap {
+        height: 450px;
+    }
+
+    /* Cuadrícula de la derecha (4 fotos secundarias) */
+    .fotos-secundarias-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 8px;
+        height: 450px;
+        position: relative;
+    }
+
+    .foto-secundaria {
+        overflow: hidden;
+        height: 100%;
+    }
+
+    /* Botón flotante "Mostrar todas las fotos" */
+    .btn-mostrar-fotos {
+        position: absolute;
+        bottom: 24px;
+        right: 24px;
+        background: #ffffff;
+        color: #222222;
+        border: 1px solid #222222;
+        padding: 8px 14px;
+        border-radius: 8px;
+        font-family: 'DM Sans', sans-serif;
+        font-size: 14px;
+        font-weight: 600;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        box-shadow: 0px 2px 4px rgba(0,0,0,0.1);
+        transition: transform 0.2s ease, background-color 0.2s ease;
+        z-index: 10;
+    }
+
+    .btn-mostrar-fotos:hover {
+        transform: scale(1.02);
+        background-color: #f7f7f7;
+    }
+
+    /* Ajuste responsivo para celulares (Se vuelve una sola foto grande) */
+    @media (max-width: 768px) {
+        .galeria-premium {
+            grid-template-columns: 1fr;
+        }
+        .fotos-secundarias-grid {
+            display: none; /* Esconde las pequeñas en pantallas muy chicas */
+        }
+        .foto-principal-wrap {
+            height: 300px;
+        }
+    }
+
+
+    /* --- DISEÑO DE LA GALERÍA --- */
+.galeria-premium {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 10px;
+    max-width: 1200px;
+    margin: 30px auto;
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid rgba(168, 224, 53, 0.15); /* Bordes sutiles verdes de tu estilo */
+}
+
+.galeria-premium img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease, filter 0.3s ease;
+}
+
+.foto-principal-wrap {
+    height: 480px;
+    overflow: hidden;
+}
+.foto-principal-wrap:hover img {
+    transform: scale(1.02);
+}
+
+.fotos-secundarias-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+    height: 480px;
+    position: relative;
+}
+
+.foto-secondary {
+    overflow: hidden;
+}
+.foto-secundaria:hover img {
+    transform: scale(1.03);
+}
+
+/* --- BOTÓN FLOTANTE ESTILIZADO (CON TUS COLORES DE MARCA) --- */
+.btn-mostrar-fotos {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background: rgba(13, 13, 13, 0.85); /* Fondo oscuro translúcido */
+    color: #ffffff;
+    border: 1px solid #a8e035; /* Borde de tu color verde de marca */
+    padding: 10px 18px;
+    border-radius: 30px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(168, 224, 53, 0.2);
+    backdrop-filter: blur(8px);
+    transition: all 0.3s ease;
+    z-index: 5;
+}
+
+.btn-mostrar-fotos:hover {
+    background: linear-gradient(90deg, #a8e035, #F5A623); /* Degradado verde a amarillo de tu marca */
+    color: #0d0d0d;
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(168, 224, 53, 0.4);
+    border-color: transparent;
+}
+
+/* --- VENTANA EMERGENTE (MODAL PREMIUM) --- */
+.modal-galeria {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    inset: 0;
+    background: rgba(13, 13, 13, 0.96); /* Fondo ultra oscuro */
+    z-index: 2000;
+    overflow-y: auto; /* Permite scroll vertical */
+    padding: 40px 20px;
+    animation: fadeIn 0.3s ease-out;
+}
+
+.modal-contenido {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    background: rgba(13, 13, 13, 0.9);
+    padding: 15px 0;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    margin-bottom: 25px;
+    z-index: 10;
+}
+
+.modal-header h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    background: linear-gradient(90deg, #a8e035, #F5A623);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.btn-cerrar-modal {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.2s;
+}
+
+.btn-cerrar-modal:hover {
+    background: #ff4444;
+    border-color: transparent;
+}
+
+/* Lista interna de fotos en el modal */
+.modal-lista-fotos {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.modal-lista-fotos img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    border: 1px solid rgba(168,224,53,0.1);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Responsivo celular */
+@media (max-width: 768px) {
+    .galeria-premium { grid-template-columns: 1fr; }
+    .fotos-secundarias-grid { display: none; }
+    .foto-principal-wrap { height: 280px; }
+}
+
+        /* Maquetación del cuerpo en dos columnas */
+        .cuerpo-layout {
+            display: grid;
+            grid-template-columns: 1.6fr 1fr;
+            gap: 40px;
+            align-items: start;
+        }
+
+        /* Bloques contenedores usando tu clase de cristal esmerilado */
+        .bloque-cristal {
+            background: var(--glass);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 32px;
+            margin-bottom: 32px;
+            transition: all 0.3s ease;
+        }
+        .bloque-cristal:hover {
+            border-color: rgba(168, 224, 53, 0.3);
+            box-shadow: 0 10px 30px rgba(168,224,53,0.03);
+        }
+        .bloque-cristal h2 {
+            font-size: 22px;
+            margin-bottom: 20px;
+            color: white;
+            font-weight: 700;
+        }
+        .bloque-cristal p {
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.7;
+            font-size: 15px;
+        }
+
+        /* Cuadrícula de características técnicas */
+        .ficha-tecnica {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+        }
+        .ficha-item {
+            background: rgba(255,255,255,0.02);
+            border: 1px solid rgba(255,255,255,0.05);
+            padding: 16px;
+            border-radius: 12px;
+            font-size: 15px;
+            color: rgba(255,255,255,0.8);
+        }
+        .ficha-item strong {
+            color: var(--verde);
+            font-size: 16px;
+        }
+
+        /* Lista de amenidades y servicios */
+        .comodidades-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 14px;
+        }
+        .comodidad-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.75);
+        }
+        .comodidad-item span.icono-check {
+            color: var(--verde);
+            font-weight: bold;
+        }
+
+        /* Panel lateral de reservas (Efecto Sticky) */
+        .tarjeta-reserva-fija {
+            position: sticky;
+            top: 130px;
+        }
+        .precio-reserva-wrap {
+            border-bottom: 1px solid var(--glass-border);
+            padding-bottom: 20px;
+            margin-bottom: 24px;
+        }
+        .precio-reserva-wrap .label-precio {
+            font-size: 13px;
+            color: rgba(255,255,255,0.5);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .precio-reserva-wrap .monto {
+            font-size: 36px;
+            font-weight: 700;
+            color: var(--amarillo);
+            margin-top: 4px;
+        }
+        .condiciones-texto {
+            font-size: 13px;
+            color: rgba(255,255,255,0.5);
+            line-height: 1.5;
+            margin-bottom: 24px;
+        }
+
+        /* Botones de acción adaptados a tus variables */
+        .btn-reserva-wa {
+            display: block;
+            width: 100%;
+            padding: 16px;
+            margin-bottom: 12px;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 15px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        .btn-reserva-wa.primario {
+            background: linear-gradient(90deg, var(--verde), var(--verde-oscuro));
+            color: #0d0d0d;
+            box-shadow: 0 8px 24px rgba(168,224,53,0.25);
+        }
+        .btn-reserva-wa.primario:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 32px rgba(168,224,53,0.4);
+        }
+        .btn-reserva-wa.secundario {
+            background: rgba(255,255,255,0.06);
+            border: 1px solid var(--glass-border);
+            color: white;
+        }
+        .btn-reserva-wa.secundario:hover {
+            background: rgba(255,255,255,0.1);
+            color: var(--verde);
+        }
+
+        /* Responsivo para smartphones y tablets */
+        @media (max-width: 992px) {
+            .galeria-premium { grid-template-columns: 1fr; }
+            .fotos-secundarias-grid { display: none; }
+            .cuerpo-layout { grid-template-columns: 1fr; }
+            .tarjeta-reserva-fija { position: relative; top: 0; }
+        }
+
+        /* --- OPTIMIZACIONES EXCLUSIVAS PARA CELULARES (max-width: 768px) --- */
+@media (max-width: 768px) {
+    
+    /* Contenedor de la galería en celular */
+    .galeria-premium {
+        grid-template-columns: 1fr;
+        position: relative;
+        margin: 15px linear;
+        border-radius: 12px;
+    }
+    
+    /* Ocultamos la grilla secundaria en teléfonos para dejar solo la foto principal */
+    .fotos-secundarias-grid {
+        display: block; 
+        position: absolute;
+        inset: 0;
+        pointer-events: none; /* Hace que el contenedor no tape los clics */
+        height: 100%;
+    }
+    
+    /* Ocultamos las imágenes pequeñas que antes se mostraban */
+    .foto-secundaria {
+        display: none;
+    }
+    
+    /* Forzamos a que el botón vuelva a ser visible y clickable sobre la foto principal */
+    .btn-mostrar-fotos {
+        position: absolute;
+        bottom: 15px;
+        right: 15px;
+        pointer-events: auto; /* Permite que el usuario pueda presionarlo */
+        padding: 8px 14px;
+        font-size: 12px;
+        background: rgba(13, 13, 13, 0.9); /* Un toque más oscuro para resaltar en pantallas pequeñas */
+    }
+    
+    /* Ajuste extra opcional para que las fichas de acomodación respiren mejor */
+    .ficha-acomodacion-grid {
+        gap: 12px;
+    }
+}

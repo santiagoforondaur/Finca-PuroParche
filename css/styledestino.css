@@ -1,0 +1,261 @@
+
+        *, *::before, *::after {
+            margin: 0; padding: 0; box-sizing: border-box;
+        }
+        :root {
+            --verde: #a8e035;
+            --verde-oscuro: #7cb82f;
+            --amarillo: #F5A623;
+            --negro: #0d0d0d;
+            --glass: rgba(255,255,255,0.05);
+            --glass-border: rgba(168, 224, 53, 0.15);
+        }
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: var(--negro);
+            color: white;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background:
+                radial-gradient(ellipse 80% 60% at 20% 10%, rgba(168,224,53,0.08) 0%, transparent 60%),
+                radial-gradient(ellipse 60% 50% at 80% 90%, rgba(245,166,35,0.06) 0%, transparent 60%);
+            z-index: 0;
+            pointer-events: none;
+        }
+        /* NAVBAR */
+        header {
+            position: sticky; top: 0; z-index: 100;
+            background: linear-gradient(180deg, rgba(13,13,13,0.40) 0%, rgba(13,13,13,0.15) 100%);
+            backdrop-filter: blur(12px);
+            border-bottom: 2px solid rgba(168,224,53,0.25);
+            transition: all 0.4s cubic-bezier(0.25,0.8,0.25,1);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+        }
+        header:has(+ *:hover) {
+            background: linear-gradient(180deg, rgba(13,13,13,0.95) 0%, rgba(13,13,13,0.85) 100%);
+            backdrop-filter: blur(24px);
+            border-bottom-color: var(--verde);
+            box-shadow: 0 12px 48px rgba(168,224,53,0.15);
+        }
+        .contenedor-navegacion {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 18px 60px;
+        }
+        .logo-texto {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px; font-weight: 700;
+            background: linear-gradient(90deg, var(--verde), var(--amarillo));
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            letter-spacing: 1px;
+            text-shadow: 0 2px 8px rgba(168,224,53,0.2);
+        }
+        nav.menu a {
+            color: rgba(255,255,255,0.85); text-decoration: none;
+            margin: 0 20px; font-size: 15px; font-weight: 500;
+            transition: color 0.3s, text-shadow 0.3s;
+            position: relative;
+        }
+        nav.menu a::after {
+            content: '';
+            position: absolute;
+            bottom: -6px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, var(--verde), var(--amarillo));
+            transition: width 0.3s ease;
+        }
+        nav.menu a:hover::after,
+        nav.menu a.activo::after {
+            width: 100%;
+        }
+        nav.menu a:hover, nav.menu a.activo { color: var(--verde); text-shadow: 0 0 12px rgba(168,224,53,0.4); }
+
+        /* HERO */
+        .hero-destinos {
+            position: relative; z-index: 1;
+            text-align: center; padding: 90px 40px 50px;
+        }
+        .etiqueta {
+            display: inline-block; font-size: 11px; font-weight: 500;
+            letter-spacing: 3px; text-transform: uppercase; color: var(--verde);
+            border: 1px solid rgba(168,224,53,0.3); padding: 6px 18px;
+            border-radius: 50px; margin-bottom: 24px;
+        }
+        .hero-destinos h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(36px, 6vw, 68px); font-weight: 700;
+            line-height: 1.1; margin-bottom: 20px;
+        }
+        .hero-destinos h1 em {
+            font-style: italic;
+            background: linear-gradient(90deg, var(--verde), var(--amarillo));
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+        }
+        .hero-destinos p {
+            font-size: 17px; color: rgba(255,255,255,0.5);
+            max-width: 500px; margin: 0 auto 40px; line-height: 1.7;
+        }
+
+        .filtros {
+            display: flex; justify-content: center; gap: 10px;
+            flex-wrap: wrap; margin-bottom: 56px;
+            position: relative; z-index: 1;
+        }
+        .filtro-btn {
+            padding: 9px 22px; border-radius: 50px;
+            border: 1px solid var(--glass-border);
+            background: var(--glass); color: rgba(255,255,255,0.65);
+            font-family: 'DM Sans', sans-serif; font-size: 14px;
+            cursor: pointer; transition: all 0.25s;
+            backdrop-filter: blur(10px);
+        }
+        .filtro-btn:hover, .filtro-btn.activo {
+            background: linear-gradient(90deg, var(--verde), var(--verde-oscuro));
+            border-color: transparent; color: #0d0d0d;
+            transform: translateY(-2px);
+            font-weight: 700;
+            box-shadow: 0 8px 24px rgba(168,224,53,0.35);
+        }
+
+        .seccion-destinos {
+            position: relative; z-index: 1;
+            padding: 0 40px 100px;
+            max-width: 1300px; margin: 0 auto;
+        }
+        .grid-destinos {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+            gap: 22px;
+        }
+        .grid-destinos .tarjeta-destino:first-child { grid-column: span 2; }
+
+        .tarjeta-destino {
+            position: relative; border-radius: 20px; overflow: hidden;
+            height: 380px; cursor: pointer;
+            transition: transform 0.4s cubic-bezier(.25,.8,.25,1), box-shadow 0.4s;
+            border: 1px solid var(--glass-border);
+            animation: aparecer 0.6s ease both;
+        }
+        .tarjeta-destino:nth-child(1){animation-delay:0.05s}
+        .tarjeta-destino:nth-child(2){animation-delay:0.10s}
+        .tarjeta-destino:nth-child(3){animation-delay:0.15s}
+        .tarjeta-destino:nth-child(4){animation-delay:0.20s}
+        .tarjeta-destino:nth-child(5){animation-delay:0.25s}
+        .tarjeta-destino:nth-child(6){animation-delay:0.30s}
+        .tarjeta-destino:nth-child(7){animation-delay:0.35s}
+        .tarjeta-destino:nth-child(8){animation-delay:0.40s}
+        @keyframes aparecer {
+            from { opacity:0; transform:translateY(30px); }
+            to   { opacity:1; transform:translateY(0); }
+        }
+        .tarjeta-destino:hover {
+            transform: translateY(-8px) scale(1.01);
+            box-shadow: 0 30px 60px rgba(0,0,0,0.5), 0 0 0 1px rgba(168,224,53,0.3);
+        }
+        .tarjeta-img {
+            position: absolute; inset: 0; width: 100%; height: 100%;
+            object-fit: cover; transition: transform 0.6s ease;
+            filter: brightness(0.72);
+        }
+        .tarjeta-destino:hover .tarjeta-img { transform: scale(1.08); }
+        .tarjeta-destino::after {
+            content: ''; position: absolute; inset: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.25) 50%, transparent 100%);
+            z-index: 1;
+        }
+        .tarjeta-info {
+            position: absolute; bottom: 0; left: 0; right: 0;
+            padding: 26px 26px 22px; z-index: 2;
+        }
+        .tarjeta-continente {
+            font-size: 10px; letter-spacing: 2.5px; text-transform: uppercase;
+            color: var(--verde); font-weight: 500; margin-bottom: 6px;
+        }
+        .estrellas { color: var(--amarillo); font-size: 12px; margin-bottom: 6px; }
+        .tarjeta-nombre {
+            font-family: 'Playfair Display', serif;
+            font-size: 27px; font-weight: 700; margin-bottom: 8px; line-height: 1.1;
+        }
+        .tarjeta-destino:first-child .tarjeta-nombre { font-size: 40px; }
+        .tarjeta-descripcion {
+            font-size: 13px; color: rgba(255,255,255,0.58);
+            line-height: 1.55; margin-bottom: 16px; max-width: 400px;
+        }
+        .tarjeta-footer {
+            display: flex; align-items: center; justify-content: space-between;
+        }
+        .tarjeta-precio { display: flex; flex-direction: column; }
+        .precio-desde { font-size: 10px; color: rgba(255,255,255,0.4); letter-spacing: 1px; text-transform: uppercase; }
+        .precio-valor { font-size: 22px; font-weight: 700; color: var(--verde); }
+        .tarjeta-duracion { font-size: 12px; color: rgba(255,255,255,0.45); }
+        .btn-ver {
+            padding: 10px 22px;
+            background: linear-gradient(90deg, var(--verde), var(--verde-oscuro));
+            border: none; border-radius: 50px; color: #0d0d0d;
+            font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 700;
+            cursor: pointer; transition: all 0.25s;
+            opacity: 0; transform: translateY(5px);
+        }
+        .tarjeta-destino:hover .btn-ver {
+            opacity: 1; transform: translateY(0);
+            box-shadow: 0 6px 20px rgba(168,224,53,0.4);
+        }
+        .badge {
+            position: absolute; top: 18px; right: 18px; z-index: 3;
+            padding: 5px 13px; border-radius: 50px;
+            font-size: 11px; font-weight: 500;
+        }
+        .badge-popular { background: linear-gradient(90deg, var(--amarillo), #e8920f); color: #0d0d0d; font-weight: 700; }
+        .badge-oferta  { background: linear-gradient(90deg, var(--verde), var(--verde-oscuro)); color: #0d0d0d; font-weight: 700; }
+
+        .banner-cta {
+            position: relative; z-index: 1;
+            margin: 0 40px 80px; border-radius: 24px; padding: 60px;
+            background: linear-gradient(135deg, #111a00, #1e3300);
+            border: 1px solid rgba(168,224,53,0.2);
+            display: flex; align-items: center; justify-content: space-between;
+            gap: 40px; overflow: hidden;
+        }
+        .banner-cta::before {
+            content: '🌿'; position: absolute; right: -10px; top: 50%;
+            transform: translateY(-50%); font-size: 200px; opacity: 0.04; pointer-events: none;
+        }
+        .banner-cta::after {
+            content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(168,224,53,0.5), transparent);
+        }
+        .banner-cta h2 {
+            font-family: 'Playfair Display', serif; font-size: 32px; margin-bottom: 10px;
+        }
+        .banner-cta p { color: rgba(255,255,255,0.5); font-size: 16px; max-width: 460px; }
+        .btn-cta {
+            flex-shrink: 0; padding: 16px 36px;
+            background: linear-gradient(90deg, var(--verde), var(--verde-oscuro));
+            border: none; border-radius: 50px; color: #0d0d0d;
+            font-family: 'DM Sans', sans-serif; font-size: 15px; font-weight: 700;
+            cursor: pointer; white-space: nowrap; transition: all 0.3s;
+            box-shadow: 0 10px 30px rgba(168,224,53,0.25);
+        }
+        .btn-cta:hover { transform: scale(1.05); box-shadow: 0 16px 40px rgba(168,224,53,0.45); }
+
+        footer {
+            position: relative; z-index: 1; text-align: center;
+            padding: 28px; border-top: 1px solid var(--glass-border);
+            color: rgba(255,255,255,0.28); font-size: 13px;
+            background: #000;
+        }
+
+        @media (max-width: 900px) {
+            .grid-destinos .tarjeta-destino:first-child { grid-column: span 1; }
+            .contenedor-navegacion { padding: 16px 20px; flex-wrap: wrap; gap: 10px; }
+            .banner-cta { flex-direction: column; text-align: center; margin: 0 20px 60px; padding: 36px 24px; }
+            .seccion-destinos { padding: 0 20px 80px; }
+            .hero-destinos { padding: 60px 20px 40px; }
+            .grid-destinos { grid-template-columns: 1fr; }
+        }

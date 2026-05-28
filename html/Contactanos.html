@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publica con Nosotros — Finca PuroParche</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="../css/styledestino.css">
+    <link rel="stylesheet" href="../css/styleContacto.css">
+</head>
+<body>
+
+<header>
+    <div class="contenedor-navegacion">
+        <span class="logo-texto"> Finca PuroParche</span>
+        <nav class="menu">
+            <a href="../index.html">Inicio</a>
+            <a href="Todo.html">Todo</a>
+            <a href="Fincas.html">Fincas</a>
+            <a href="Glampings.html">Glampings</a>
+            <a href="contactanos.html" class="activo">Publicar</a>
+        </nav>
+    </div>
+</header>
+
+<section class="hero-destinos">
+    <span class="etiqueta"> Trabaja con nosotros</span>
+    <h1>¿Tienes una finca o glamping?<br><em>¡Publícalo aquí!</em></h1>
+    <p>Déjanos los datos de tu propiedad y un asesor te contactará para activarla en nuestra plataforma.</p>
+</section>
+
+<section class="seccion-formulario">
+    <form id="form-publicar">
+        <div class="grupo-campo">
+            <label id="label-nombre">Tu Nombre Completo</label>
+            <input type="text" id="nombre" placeholder="Ej: Juan Pérez" required>
+        </div>
+
+        <div class="grupo-campo">
+            <label id="label-propiedad">Nombre de la Finca o Glamping</label>
+            <input type="text" id="propiedad" placeholder="Ej: Finca El Ensueño" required>
+        </div>
+
+        <div class="grupo-campo">
+            <label id="label-tipo">Tipo de Propiedad</label>
+            <select id="tipo-propiedad" required>
+                <option value="">Selecciona una opción</option>
+                <option value="Finca">Finca</option>
+                <option value="Glamping">Glamping</option>
+            </select>
+        </div>
+
+        <div class="grupo-campo">
+            <label id="label-municipio">Municipio / Ubicación</label>
+            <input type="text" id="municipio" placeholder="Ej: Barbosa, San Pedro..." required>
+        </div>
+
+        <div class="grupo-campo">
+            <label id="label-detalles">Cuéntanos un poco sobre el lugar</label>
+            <textarea id="detalles" placeholder="Ej: Capacidad para cuántas personas, si tiene piscina, jacuzzi, etc..." required></textarea>
+        </div>
+
+        <button type="submit" class="btn-enviar-form">Enviar Información por WhatsApp</button>
+    </form>
+</section>
+
+<div class="banner-cta">
+    <div>
+        <h2>¿Tienes alguna duda inmediata?</h2>
+        <p>Escríbenos directamente y uno de nuestros asesores resolverá tus preguntas sobre las comisiones y registros.</p>
+    </div>
+    <a href="https://wa.me/573137295214?text=¡Hola!%20Tengo%20dudas%20sobre%20cómo%20funciona%20el%20registro%20de%20propiedades." target="_blank" class="btn-cta" style="text-decoration: none; display: inline-block; text-align: center;">Chatear con Soporte</a>
+</div>
+
+<footer>
+    <p>© 2025 FincaPuroParche · Todos los derechos reservados</p>
+</footer>
+
+<script>
+    document.getElementById('form-publicar').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const nombre = document.getElementById('nombre').value;
+        const propiedad = document.getElementById('propiedad').value;
+        const tipo = document.getElementById('tipo-propiedad').value;
+        const municipio = document.getElementById('municipio').value;
+        const detalles = document.getElementById('detalles').value;
+        
+        // Reemplaza este número por el tuyo real con el código de país (57 para Colombia)
+        const tuNumeroWhatsApp = "573137295214"; 
+        
+        // Estructuramos el mensaje de forma ordenada y profesional
+        const mensaje = `¡Hola! Me gustaría publicar mi propiedad en Finca PuroParche. Aquí tienes los datos:%0A%0A` +
+                        `• *Nombre:* ${encodeURIComponent(nombre)}%0A` +
+                        `• *Propiedad:* ${encodeURIComponent(propiedad)}%0A` +
+                        `• *Tipo:* ${encodeURIComponent(tipo)}%0A` +
+                        `• *Municipio:* ${encodeURIComponent(municipio)}%0A` +
+                        `• *Detalles:* ${encodeURIComponent(detalles)}`;
+        
+        // Abrimos la pestaña hacia WhatsApp con el formulario completo
+        window.open(`https://wa.me/${tuNumeroWhatsApp}?text=${mensaje}`, '_blank');
+    });
+</script>
+
+</body>
+</html>
